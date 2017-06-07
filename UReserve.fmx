@@ -67,6 +67,7 @@ object ReserveForm: TReserveForm
         object EditLibName: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 2
+          ReadOnly = True
           Text = #44060#54252#46020#49436#44288
           TextSettings.Font.Family = 'Trebuchet MS'
           TextSettings.Font.Size = 20.000000000000000000
@@ -409,6 +410,7 @@ object ReserveForm: TReserveForm
         object EditSeatNum: TEdit
           Touch.InteractiveGestures = [LongTap, DoubleTap]
           TabOrder = 2
+          ReadOnly = True
           TextSettings.Font.Family = 'Trebuchet MS'
           TextSettings.Font.Size = 20.000000000000000000
           Position.X = 112.000000000000000000

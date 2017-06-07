@@ -41,6 +41,8 @@ type
     Cl_DupSeat: TClientDataSet;
     qryDupSeat_source: TDataSource;
     Cl_qrySeatRENT_SEATNUM: TIntegerField;
+    Cl_qryTalking: TClientDataSet;
+    TalkingSource: TDataSource;
 
     procedure DataModuleCreate(Sender: TObject);
     procedure DataModuleDestroy(Sender: TObject);

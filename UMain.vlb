@@ -65,3 +65,9 @@ Coordinates=66,312,65,33
 []
 Coordinates=464,312,54,33
 
+[DM.Cl_qryLibAddress]
+Visible=False
+
+[DM.LibNameSource]
+Visible=False
+

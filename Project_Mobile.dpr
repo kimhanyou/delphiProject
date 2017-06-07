@@ -9,7 +9,9 @@ uses
   UInsert in 'UInsert.pas' {InsertForm},
   UReserve in 'UReserve.pas' {ReserveForm},
   UMypage in 'UMypage.pas' {MypageForm},
-  UFindLib in 'UFindLib.pas' {FindForm};
+  UFindLib in 'UFindLib.pas' {FindForm},
+  UTalking in 'UTalking.pas' {TalkForm},
+  UMain2 in 'UMain2.pas' {MainForm2};
 
 {$R *.res}
 

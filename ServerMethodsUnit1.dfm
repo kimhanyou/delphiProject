@@ -9,11 +9,13 @@ object ServerMethods1: TServerMethods1
       'Password=masterkey'
       'CharacterSet=utf8'
       'DriverID=iB')
+    Connected = True
     LoginPrompt = False
     Left = 48
     Top = 32
   end
   object qryUser: TFDQuery
+    Active = True
     Connection = LibConnection
     UpdateOptions.AutoIncFields = 'USER_SEQ'
     SQL.Strings = (
@@ -60,6 +62,7 @@ object ServerMethods1: TServerMethods1
     end
   end
   object qryLib: TFDQuery
+    Active = True
     Connection = LibConnection
     UpdateOptions.AutoIncFields = 'LIB_SEQ'
     SQL.Strings = (
@@ -68,6 +71,7 @@ object ServerMethods1: TServerMethods1
     Top = 32
   end
   object qryRent: TFDQuery
+    Active = True
     Connection = LibConnection
     UpdateOptions.AutoIncFields = 'RENT_SEQ'
     SQL.Strings = (
@@ -86,6 +90,7 @@ object ServerMethods1: TServerMethods1
     Top = 88
   end
   object qryCheckLogin: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       'SELECT USER_ID,USER_PW FROM USERS'
@@ -108,6 +113,7 @@ object ServerMethods1: TServerMethods1
       end>
   end
   object qryDuplicatedID: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       'SELECT USER_ID FROM USERS'
@@ -144,6 +150,7 @@ object ServerMethods1: TServerMethods1
     Top = 96
   end
   object qryLibAddress: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       'SELECT LIBADDRESS FROM LIB GROUP BY LIBADDRESS')
@@ -156,6 +163,7 @@ object ServerMethods1: TServerMethods1
     Top = 248
   end
   object qryLibName: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       'SELECT LIBNAME,LIBADDRESS FROM LIB')
@@ -168,6 +176,7 @@ object ServerMethods1: TServerMethods1
     Top = 240
   end
   object qryDupSeat: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       
@@ -194,6 +203,7 @@ object ServerMethods1: TServerMethods1
     Top = 248
   end
   object qrySeat: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       
@@ -220,6 +230,7 @@ object ServerMethods1: TServerMethods1
     Top = 256
   end
   object qryDuplicatedNum: TFDQuery
+    Active = True
     Connection = LibConnection
     SQL.Strings = (
       
@@ -248,6 +259,19 @@ object ServerMethods1: TServerMethods1
   object qryDuplicatedNum_Provider: TDataSetProvider
     DataSet = qryDuplicatedNum
     Left = 616
+    Top = 240
+  end
+  object qryTalking: TFDQuery
+    Active = True
+    Connection = LibConnection
+    SQL.Strings = (
+      'SELECT * FROM MESSENGER')
+    Left = 736
+    Top = 168
+  end
+  object qryTalking_Provider: TDataSetProvider
+    DataSet = qryTalking
+    Left = 760
     Top = 240
   end
 end

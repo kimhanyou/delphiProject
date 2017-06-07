@@ -1,6 +1,6 @@
 //
 // Created by the DataSnap proxy generator.
-// 2017-06-05 오후 12:54:23
+// 2017-06-07 오후 2:09:42
 //
 
 unit UClientClass;

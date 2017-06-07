@@ -66,6 +66,7 @@ type
     BindSourceDB1: TBindSourceDB;
     LinkControlToField1: TLinkControlToField;
     procedure CloseClick(Sender: TObject);
+    procedure Main2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -78,11 +79,21 @@ var
 implementation
 
 {$R *.fmx}
+
+uses UMain2;
 {$R *.LgXhdpiPh.fmx ANDROID}
 
 procedure TMypageForm.CloseClick(Sender: TObject);
 begin
   MypageForm.Close;
+end;
+
+procedure TMypageForm.Main2Click(Sender: TObject);
+begin
+  if not Assigned(MainForm2) then
+    MainForm2 := tMainForm2.Create(self);
+
+  MainForm2.SHOW;
 end;
 
 end.

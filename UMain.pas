@@ -37,12 +37,15 @@ type
     EditPW: TEdit;
     procedure LoginClick(Sender: TObject);
     procedure Text2Click(Sender: TObject);
+
   private
     { Private declarations }
 
     function CheckID: Boolean;
   public
     { Public declarations }
+  var
+    MYID: string;
 
   end;
 
@@ -77,6 +80,7 @@ begin
 
   if demo.CheckLogin(id, pw) then
   begin
+    // MYID := id;
     ShowMessage('로그인이 되었습니다.');
     FindForm := tFindform.create(application);
     FindForm.SHOW;

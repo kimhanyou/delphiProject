@@ -233,4 +233,18 @@ object DM: TDM
     Left = 576
     Top = 288
   end
+  object Cl_qryTalking: TClientDataSet
+    Active = True
+    Aggregates = <>
+    Params = <>
+    ProviderName = 'qryTalking_Provider'
+    RemoteServer = DSProviderConnection1
+    Left = 128
+    Top = 376
+  end
+  object TalkingSource: TDataSource
+    DataSet = Cl_qryTalking
+    Left = 136
+    Top = 432
+  end
 end

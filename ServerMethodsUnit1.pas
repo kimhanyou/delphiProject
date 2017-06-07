@@ -40,11 +40,14 @@ type
     qrySeat_Provider: TDataSetProvider;
     qryDuplicatedNum: TFDQuery;
     qryDuplicatedNum_Provider: TDataSetProvider;
+    qryTalking: TFDQuery;
+    qryTalking_Provider: TDataSetProvider;
   private
     { Private declarations }
   public
     { Public declarations }
     myseq: integer;
+    myid: string;
     mySNum: integer;
     mySeatNum: integer;
     function EchoString(Value: string): string;
@@ -53,6 +56,8 @@ type
     function DuplicatedID(AID: string): boolean;
     function CheckSeat(ADATE: TDateTime; ALIBSEQ: integer): boolean;
     function Duplicatednum(ADATE: TDateTime; ALIBSEQ: integer; ARent_SeatNum: integer): boolean;
+
+    // function SendMSG: boolean;
   end;
 
 implementation
@@ -91,7 +96,9 @@ begin
 
   if (qryCheckLogin.RecordCount > 0) then
   begin
-    myseq := qryCheckLogin.FieldByName('User_Seq').AsInteger;
+//    myseq := qryCheckLogin.FieldByName('User_Seq').AsInteger;
+    myid := qryCheckLogin.FieldByName('User_id').AsString;
+
     Result := True;
   end;
 
@@ -126,6 +133,20 @@ begin
     Result := True;
   end;
 end;
+
+//function TServerMethods1.SendMSG: boolean;
+//begin
+//  Result := False;
+//  qryTalking.Close;
+//  qryTalking.SQL.Text := 'SELECT * FROM MESSENGER';
+//  qryTalking.Open;
+//
+//  if (qryTalking.RecordCount > 0) then
+//  begin
+//    mySNum := qryTalking.FieldByName('USER_ID').AsString;
+//    Result := True;
+//  end;
+//end;
 
 function TServerMethods1.EchoString(Value: string): string;
 begin

@@ -56,7 +56,6 @@ object MypageForm: TMypageForm
           Size.Width = 57.800128936767580000
           Size.Height = 32.511718750000000000
           Size.PlatformDefault = False
-          Text = 'one'
           TextSettings.Font.Family = 'Trebuchet MS'
           TextSettings.Font.Size = 28.000000000000000000
           TextSettings.Font.StyleExt = {00070000000000000004000000}
@@ -207,6 +206,7 @@ object MypageForm: TMypageForm
           object EditRentETIME: TEdit
             Touch.InteractiveGestures = [LongTap, DoubleTap]
             TabOrder = 0
+            ReadOnly = True
             Text = #50724#51204' 10:00:00'
             TextSettings.Font.Family = 'Trebuchet MS'
             TextSettings.Font.Size = 24.000000000000000000
@@ -226,6 +226,7 @@ object MypageForm: TMypageForm
         Size.Height = 57.000000000000000000
         Size.PlatformDefault = False
         TabOrder = 2
+        OnClick = Main2Click
         object RoundRect9: TRoundRect
           Align = Center
           Anchors = [akLeft, akTop, akRight, akBottom]
@@ -234,6 +235,7 @@ object MypageForm: TMypageForm
           Size.Height = 46.000000000000000000
           Size.PlatformDefault = False
           Stroke.Color = claNull
+          OnClick = Main2Click
           object Text7: TText
             Align = Center
             Anchors = [akLeft, akTop, akRight, akBottom]
@@ -246,6 +248,7 @@ object MypageForm: TMypageForm
             TextSettings.Font.Size = 20.000000000000000000
             TextSettings.Font.StyleExt = {00070000000000000004000000}
             TextSettings.FontColor = claDeepskyblue
+            OnClick = Main2Click
           end
         end
       end
@@ -341,6 +344,7 @@ object MypageForm: TMypageForm
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Center
               TabOrder = 0
+              ReadOnly = True
               Text = #44060#54252#46020#49436#44288
               TextSettings.Font.Family = 'Trebuchet MS'
               TextSettings.Font.Size = 24.000000000000000000
@@ -411,6 +415,7 @@ object MypageForm: TMypageForm
             object EditRentSTIME: TEdit
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               TabOrder = 0
+              ReadOnly = True
               Text = #50724#51204' 9:00:00'
               TextSettings.Font.Family = 'Trebuchet MS'
               TextSettings.Font.Size = 24.000000000000000000
@@ -483,6 +488,7 @@ object MypageForm: TMypageForm
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Center
               TabOrder = 0
+              ReadOnly = True
               Text = '2017-05-31'
               TextSettings.Font.Family = 'Trebuchet MS'
               TextSettings.Font.Size = 24.000000000000000000
@@ -553,6 +559,7 @@ object MypageForm: TMypageForm
               Touch.InteractiveGestures = [LongTap, DoubleTap]
               Align = Center
               TabOrder = 0
+              ReadOnly = True
               Text = '1'
               TextSettings.Font.Family = 'Trebuchet MS'
               TextSettings.Font.Size = 24.000000000000000000

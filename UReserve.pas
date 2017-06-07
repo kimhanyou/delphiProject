@@ -110,6 +110,11 @@ var
   seatnum: Integer;
 begin
 
+  if PickDate.date < Now then
+  begin
+    ShowMessage('이전날짜는 예약이 안됩니다.');
+  end;
+
   SeatNumCheck(PickDate.date, strtoint(EditLibseq.Text));
   for i := 0 to Length(FButtonInfos) - 1 do
     FButtonInfos[i].Button.Enabled := True;
@@ -172,7 +177,15 @@ end;
 
 procedure TReserveForm.ReserveClick(Sender: TObject);
 begin
-  DuplicatedSeat;
+  if PickDate.date < Now then
+  begin
+    ShowMessage('이전날짜는 예약이 안됩니다.');
+  end
+  else
+  begin
+    DuplicatedSeat;
+  end;
+
 end;
 
 procedure TReserveForm.closeclick(Sender: TObject);
@@ -187,6 +200,8 @@ var
   seatnum: Integer;
 
 begin
+  PickDate.date := Now;
+
   date := PickDate.date;
   libseq := strtoint(EditLibseq.Text);
   demo.CheckSeat(date, libseq);

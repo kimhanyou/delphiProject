@@ -6,7 +6,7 @@
         <MainSource>Project_Mobile.dpr</MainSource>
         <Base>True</Base>
         <Config Condition="'$(Config)'==''">Debug</Config>
-        <Platform Condition="'$(Platform)'==''">Android</Platform>
+        <Platform Condition="'$(Platform)'==''">Win32</Platform>
         <TargetedPlatforms>1117</TargetedPlatforms>
         <AppType>Application</AppType>
     </PropertyGroup>
@@ -299,6 +299,14 @@
         </DCCReference>
         <DCCReference Include="UFindLib.pas">
             <Form>FindForm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UTalking.pas">
+            <Form>TalkForm</Form>
+            <FormType>fmx</FormType>
+        </DCCReference>
+        <DCCReference Include="UMain2.pas">
+            <Form>MainForm2</Form>
             <FormType>fmx</FormType>
         </DCCReference>
         <BuildConfiguration Include="Release">
